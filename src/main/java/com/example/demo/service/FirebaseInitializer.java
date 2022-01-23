@@ -15,7 +15,7 @@ public class FirebaseInitializer {
 	@PostConstruct
 	public void initialize() {
 		try {
-			FileInputStream serviceAccount = new FileInputStream("/home/lucestdail/eclipse-workspace/firebasejsonkey/springboottestkey.json");
+			FileInputStream serviceAccount = new FileInputStream("src/main/resources/springboottestkey.json");
 			FirebaseOptions options = new FirebaseOptions.Builder()
 					.setCredentials(GoogleCredentials.fromStream(serviceAccount)).build();
 
